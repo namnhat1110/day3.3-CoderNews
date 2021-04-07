@@ -4,12 +4,20 @@ function renderArticles(articles) {
     const newsList = document.getElementById("news-list")
     const articlesHTMLArray = articles.map((a) => {
         return `
-        <div class="card mb-5" style="width: 30rem;">
+        <div class="card mb-5" style="width: 100%;">
+        <h5 class="card-title">${a.title}</h5>
             <img src="${a.urlToImage}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">${a.title}</h5>
+                <div class = "row">
+                    <div class="col-6">${a.publishedAt}</div>
+                    <div class="col-6 author">By: ${a.author}</div>
+                </div>
+                <hr class="solid">
                 <p class="card-text">${a.description}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                
+                <p>${a.source.name}</p>
+            
+                <a href="#" class="btn btn-primary">More</a>
             </div>
         </div>
         `

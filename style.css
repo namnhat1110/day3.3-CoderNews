@@ -1,0 +1,35 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+@media screen and (max-width: 600px) {
+  .row {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+h1{
+    text-align: center;
+    padding: 10px, 0;
+}
+
+hr.solid {
+  border-top: 1px solid  rgb(6, 6, 78);
+}
+
+.card-title{
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+.author{
+    text-align: right;
+}
+
+.card{
+    border: solid 2px rgb(6, 6, 78);
+    border-radius: 1rem;
+}
