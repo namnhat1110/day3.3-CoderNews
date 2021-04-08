@@ -5,19 +5,19 @@ function renderArticles(articles) {
     const articlesHTMLArray = articles.map((a) => {
         return `
         <div class="card mb-5" style="width: 100%;">
-        <h5 class="card-title">${a.title}</h5>
-            <img src="${a.urlToImage}" class="card-img-top" alt="...">
+        <a href="${a.url}"><h5 class="card-title">${a.title}</h5></a>
+            <a href="${a.url}"><img src="${a.urlToImage}" class="card-img-top" alt="..."></a>
             <div class="card-body">
                 <div class = "row">
-                    <div class="col-6">${a.publishedAt}</div>
-                    <div class="col-6 author">By: ${a.author}</div>
+                    <div class="col-6"><i class="far fa-calendar-alt"></i> ${a.publishedAt}</div>
+                    <div class="col-6 author"><i class="fas fa-edit"></i> ${a.author}</div>
                 </div>
                 <hr class="solid">
-                <p class="card-text">${a.description}</p>
+                <p class="card-text"> <i class="far fa-newspaper"></i> ${a.description}</p>
                 
                 <p>${a.source.name}</p>
             
-                <a href="#" class="btn btn-primary">More</a>
+                <a href="${a.url}" class="btn btn-primary">More</a>
             </div>
         </div>
         `

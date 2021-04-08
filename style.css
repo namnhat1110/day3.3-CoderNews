@@ -4,16 +4,23 @@
 
 }
 
-@media screen and (max-width: 600px) {
-  .row {
-    flex: 100%;
-    max-width: 100%;
+@media only screen and (max-width: 768px) {
+  [class*="col-"] {
+    width: 100%;
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .col-6  {width: 50%;}
+}
+    
+
 h1{
     text-align: center;
-    padding: 10px, 0;
+}
+
+h5{
+  font-size: x-large
 }
 
 hr.solid {
@@ -22,7 +29,7 @@ hr.solid {
 
 .card-title{
     text-align: center;
-    padding: 1rem 0rem;
+    padding: 1rem 1rem;
 }
 
 .author{
