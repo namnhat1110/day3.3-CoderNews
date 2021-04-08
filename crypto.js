@@ -75,7 +75,7 @@ function calculatePriceFromPercentageChange(currentPrice, percentageChange) {
     return historicPrice;
 }
 
-function getHistoricPrices(coin) {
+function getHistoricPrices(coins) {
     const {
         percent_change_90d,
         percent_change_60d,
@@ -84,7 +84,7 @@ function getHistoricPrices(coin) {
         percent_change_24h,
         percent_change_1h,
         price,
-    } = coin.quote.USD;
+    } = coins.quote.USD;
 
     const ninetyAgoPrice = calculatePriceFromPercentageChange(
         price,
