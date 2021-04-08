@@ -14,7 +14,7 @@ function renderArticles(articles) {
                 </div>
                 <hr class="solid">
                 <p class="card-text"> <i class="far fa-newspaper"></i> ${a.description}</p>
-                
+                <hr class="solid">
                 <p>${a.source.name}</p>
             
                 <a href="${a.url}" class="btn btn-primary">More</a>
